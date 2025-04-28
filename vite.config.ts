@@ -1,5 +1,5 @@
 import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react"; // Changed from @vitejs/plugin-react-swc
+import react from "@vitejs/plugin-react";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
@@ -12,8 +12,8 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     react(),
     mode === 'development' && componentTagger(),
-  ].filter(Boolean),
-  base: "/gdbfgb/", // <-- Agora perfeito: / no começo e no final
+  ].filter(Boolean), // <-- aqui fecha o array plugins certinho
+  base: "/fbhgfh", // <-- aqui está fora do plugins, certinho
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
