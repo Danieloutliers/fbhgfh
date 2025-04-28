@@ -12,8 +12,8 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     react(),
     mode === 'development' && componentTagger(),
-  ].filter(Boolean), // <-- fecha o array de plugins aqui!
-  base: "/gdbfgb", // <-- agora aqui fora do plugins, certinho!
+  ].filter(Boolean),
+  base: "/gdbfgb/", // <-- Agora perfeito: / no começo e no final
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
